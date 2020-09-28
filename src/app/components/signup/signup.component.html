@@ -1,0 +1,53 @@
+<form class = 'signup__form' [formGroup] = 'userSignupDetails'>
+
+    <!-- User Email Field -->
+
+    <input
+        type = 'email'
+        placeholder = "Email"
+        [ngClass] = '{"error": userEmail.dirty && userEmail.invalid}'
+        name = 'userEmail'
+        formControlName = 'userEmail'
+        autocomplete = "off" />
+
+    <!-- User Full Name Field -->
+
+    <input
+        type = 'text'
+        placeholder = "Full Name"
+        [ngClass] = '{"error": userFullName.dirty && userFullName.invalid}'
+        name = 'userFullName'
+        formControlName = 'userFullName'
+        autocomplete = "off" />
+
+    <!-- Username Field -->
+
+    <input
+        type = 'text'
+        placeholder = "Username"
+        [ngClass] = '{"error": userAccountName.dirty && userAccountName.invalid}'
+        name = 'userAccountName'
+        formControlName = 'userAccountName'
+        autocomplete = "off" />
+
+    <!-- User Password Field -->
+
+    <input
+        type = 'password'
+        placeholder = "Password"
+        [ngClass] = '{"error": userPassword.dirty && userPassword.invalid}'
+        name = 'userPassword'
+        formControlName = 'userPassword'
+        autocomplete = "off" />
+
+    <!-- Signup Button -->
+
+    <button
+        [disabled] = 'userSignupDetails.invalid'
+        type = 'submit'
+        class = 'submit__btn'>
+            Sign up
+    </button>
+
+</form>
+

@@ -1,0 +1,33 @@
+<form class = 'signin__form' [formGroup] = 'userSigninDetails'>
+
+    <!-- User Email Field -->
+
+    <input
+        type = 'email'
+        placeholder = 'Email'
+        [ngClass] = '{"error": userEmail.dirty && userEmail.invalid}'
+        name = 'userEmail'
+        formControlName = 'userEmail'
+        autocomplete = "off" />
+
+    <!-- User Password Field -->
+
+    <input
+        type = 'password'
+        placeholder = 'Password'
+        [ngClass] = '{"error": userPassword.dirty && userPassword.invalid}'
+        name = 'userPassword'
+        formControlName = 'userPassword'
+        autocomplete = "off" />
+
+    <!-- Login Button -->
+
+    <button
+        [disabled] = 'userSigninDetails.invalid'
+        type = 'submit'
+        class = 'submit__btn'>
+            Log In
+    </button>
+
+</form>
+

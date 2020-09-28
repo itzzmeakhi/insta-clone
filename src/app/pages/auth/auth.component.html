@@ -1,0 +1,45 @@
+<div class = 'auth__page'>
+
+    <div class = 'auth__container auth'>
+
+        <h1 class = 'word__header'> Instagram </h1>
+
+        <p 
+            class = 'signup__header' 
+            *ngIf = '!isLoginMode'>
+                Sign up to see photos and videos from your friends.
+        </p>
+
+        <app-signup *ngIf = '!isLoginMode'></app-signup>
+
+        <app-signin *ngIf = 'isLoginMode'></app-signin>
+
+        <p 
+            class = 'signup__footer'
+            *ngIf = '!isLoginMode'>
+                By signing up, you agree to our Terms, Data  Policy and Cookies Policy.
+        </p>
+
+    </div>
+
+    <div class = 'auth__container auth__switch'>
+
+        <p *ngIf = '!isLoginMode'> Have an account? 
+            <button 
+                (click) = 'changeAuthMode()'
+                class = 'btn__link'> 
+                    Log in 
+            </button> 
+        </p>
+
+        <p *ngIf = 'isLoginMode'> Don't have an account? 
+            <button 
+                (click) = 'changeAuthMode()'
+                class = 'btn__link'> 
+                    Sign up
+            </button> 
+        </p>
+
+    </div>
+
+</div>

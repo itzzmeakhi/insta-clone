@@ -3,23 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'insta-clone';
-  usersCollection: AngularFirestoreCollection;
+    usersCollection: AngularFirestoreCollection;
 
-  constructor(private angularFirestore: AngularFirestore) {}
+    constructor(private angularFirestore: AngularFirestore) {}
 
-  ngOnInit() {
-      this.usersCollection = this.angularFirestore.collection('users');
-  }
+    ngOnInit() {
+        this.usersCollection = this.angularFirestore.collection('users');
+        //this.usersCollection.snapshotChanges().subscribe(val => console.log(val))
+    }
 
-  addUser() {
-      this.usersCollection.add({
-          name: 'itzzmeakhi'
-      })
-  }
 }
