@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { PasswordValidators } from './../../shared/validators/password.validators';
 
 @Component({
     selector: 'app-signup',
@@ -13,12 +14,11 @@ export class SignupComponent implements OnInit {
 
     ngOnInit() {
         this.userSignupDetails = this.fb.group({
-            'userEmail': ['', [Validators.required, Validators.email]],
-            'userFullName': ['', [Validators.required]],
-            'userAccountName': ['', [Validators.required]],
-            'userPassword': ['', [Validators.required]]
+            'userEmail': ['', [ Validators.required, Validators.email ]],
+            'userFullName': ['', [ Validators.required, Validators.minLength(3) ]],
+            'userAccountName': ['', [ Validators.required ]],
+            'userPassword': ['', [ Validators.required, PasswordValidators.passwordStrength ]]
         });
-        console.log(this.userSignupDetails);
     }
 
     get userEmail() {

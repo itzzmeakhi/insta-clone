@@ -40,6 +40,11 @@
         formControlName = 'userPassword'
         autocomplete = "off" />
 
+    <p *ngIf = 'userPassword.errors.passwordStrength' class = 'pwd__tip'>
+        Tip! Try adding combination of lowercase, uppercase letter's, number's, symbols like
+        .!@#$ with minimum length of 8 character's in length.
+    </p>
+
     <!-- Signup Button -->
 
     <button

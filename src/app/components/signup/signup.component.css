@@ -25,6 +25,11 @@
     border: 1px solid red;
 }
 
+.signup__form .pwd__tip {
+    color: #9d9d9d;
+    font-size: 75%;
+}
+
 .signup__form > .submit__btn {
     background-color: #2e95f6;
     color: #fff;
