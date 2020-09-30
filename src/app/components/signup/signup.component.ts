@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+
 import { PasswordValidators } from './../../shared/validators/password.validators';
+import { AuthService } from './../../shared/services/auth.service';
 
 @Component({
     selector: 'app-signup',
@@ -10,7 +12,8 @@ import { PasswordValidators } from './../../shared/validators/password.validator
 export class SignupComponent implements OnInit {
     userSignupDetails: FormGroup;
 
-    constructor(private fb: FormBuilder) { }
+    constructor(private fb: FormBuilder,
+                private authService: AuthService) { }
 
     ngOnInit() {
         this.userSignupDetails = this.fb.group({
@@ -35,6 +38,30 @@ export class SignupComponent implements OnInit {
 
     get userPassword() {
         return this.userSignupDetails.get('userPassword');
+    }
+
+    setData() {
+        this.authService.setUserData({
+            userEmail: 'akhilmallidi.98@gmail.com',
+            userFullName: 'Akhil',
+            userAccountName: 'Akhil Reddy Mallidi'
+        })  
+    }
+
+    handleSubmit() {
+        this.authService.createUserWithEmailAndPassword(
+            {
+                userEmail: this.userEmail.value,
+                userPassword: this.userPassword.value
+            }
+        ).then(res => {
+            this.authService.setUserData({
+                userEmail: res.user.email,
+                userFullName: this.userFullName.value,
+                userAccountName: this.userAccountName.value,
+                userId: res.user.uid
+            })
+        });
     }
 
 }

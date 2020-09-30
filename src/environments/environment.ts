@@ -5,14 +5,13 @@
 export const environment = {
     production: false,
     firebaseConfig: {
-        apiKey: "AIzaSyDz4rDHqSESxKQZHAZBh1m9Gm7PHcx32jU",
-        authDomain: "insta-clone-645a6.firebaseapp.com",
-        databaseURL: "https://insta-clone-645a6.firebaseio.com",
-        projectId: "insta-clone-645a6",
-        storageBucket: "insta-clone-645a6.appspot.com",
-        messagingSenderId: "853797228779",
-        appId: "1:853797228779:web:c14a2d6755c571aaf3aeae",
-        measurementId: "G-BW26E3S4G6"
+        apiKey: "AIzaSyBYcVhQoZfCf0K1ZWtORVagCmqwNUgI0qs",
+        authDomain: "insta-clone-29bab.firebaseapp.com",
+        databaseURL: "https://insta-clone-29bab.firebaseio.com",
+        projectId: "insta-clone-29bab",
+        storageBucket: "insta-clone-29bab.appspot.com",
+        messagingSenderId: "430091193412",
+        appId: "1:430091193412:web:989e26792bf006a3034011"
     }
 };
 

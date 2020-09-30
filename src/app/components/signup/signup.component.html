@@ -1,4 +1,4 @@
-<form class = 'signup__form' [formGroup] = 'userSignupDetails'>
+<form class = 'signup__form' [formGroup] = 'userSignupDetails' (ngSubmit) = 'handleSubmit()'>
 
     <!-- User Email Field -->
 
@@ -40,7 +40,7 @@
         formControlName = 'userPassword'
         autocomplete = "off" />
 
-    <p *ngIf = 'userPassword.errors.passwordStrength' class = 'pwd__tip'>
+    <p *ngIf = 'userPassword.errors?.passwordStrength' class = 'pwd__tip'>
         Tip! Try adding combination of lowercase, uppercase letter's, number's, symbols like
         .!@#$ with minimum length of 8 character's in length.
     </p>
@@ -52,6 +52,12 @@
         type = 'submit'
         class = 'submit__btn'>
             Sign up
+    </button>
+
+    <button
+        type = 'button'
+        (click) = 'setData()'>
+            Set Data
     </button>
 
 </form>
