@@ -1,0 +1,23 @@
+.searchField {
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 4px;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    color: #777;
+    pointer-events: none;
+  }
+  input {
+    padding: 5px;
+    padding-left: 25px;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      border: 2px solid #000;
+    }
+  }
+}
