@@ -1,0 +1,14 @@
+.feed {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "content profile";
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  .content {
+    grid-area: "content";
+  }
+  .profile {
+    grid-area: "profile";
+  }
+}

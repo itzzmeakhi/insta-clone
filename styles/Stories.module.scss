@@ -4,5 +4,11 @@
   overflow-x: scroll;
   margin-top: 10px;
   padding: 10px;
+  background-color: #fff;
   border: 1px solid #eee;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

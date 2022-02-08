@@ -1,0 +1,83 @@
+.post {
+  background-color: #fff;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    .imgDiv {
+      height: 40px;
+      width: 40px;
+      position: relative;
+      img {
+        border-radius: 50%;
+        padding: 1px !important;
+        border: 1px solid red !important;
+      }
+    }
+    p {
+      flex-grow: 1;
+      font-weight: 600;
+    }
+    svg {
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 100%;
+    object-fit: cover;    
+  }
+  .btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .btnsGroup {
+      display: flex;
+      flex-direction: row;
+      column-gap: 15px;
+    }
+  }
+  p {
+    span {
+      font-weight: 600;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+    input {
+      flex-grow: 1;
+      border: transparent;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+}
