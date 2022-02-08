@@ -6,6 +6,6 @@ module.exports = {
     includePaths: [path.join(__dirname, "styles")],
   },
   images: {
-    domains: ["upload.wikimedia.org", "1000logos.net"]
+    domains: ["upload.wikimedia.org", "1000logos.net", "cloudflare-ipfs.com"]
   }
 }
