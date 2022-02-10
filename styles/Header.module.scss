@@ -24,7 +24,8 @@
       width: 20%;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
+      column-gap: 10px;
       align-items: center;
       .smBtn {
         display: none;
@@ -40,6 +41,18 @@
         &:hover {
           transform: scale(1.25);
         }
+      }
+      button {
+        background-color: #fff;
+        cursor: pointer;
+      }
+      img {
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        padding: 2px; 
       }
       .msgBtn {
         display: inline-block;

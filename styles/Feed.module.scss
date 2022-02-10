@@ -5,10 +5,17 @@
   grid-template-areas: "content profile";
   grid-template-columns: 60% 40%;
   grid-template-rows: 1fr;
+  column-gap: 20px;
+  margin-top: 10px;
   .content {
     grid-area: "content";
   }
   .profile {
     grid-area: "profile";
+    & > div {
+      background-color: #fff;
+      padding: 20px;
+      position: fixed;
+    }
   }
 }

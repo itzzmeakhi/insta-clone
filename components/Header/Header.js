@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/solid";
+import { useSession, signIn } from "next-auth/react";
 import { 
   PaperAirplaneIcon,
   MenuIcon,
@@ -13,6 +14,8 @@ import SearchField from "../SearchField/SearchField";
 import styles from './../../styles/Header.module.scss';
 
 const Header = () => {
+  const { data: session } = useSession();
+  console.log(session)
   return (
     <div className={styles.header}>
       <div className={styles.container}>
@@ -31,14 +34,27 @@ const Header = () => {
         <SearchField />
         <div className={styles.navBtns}>
           <HomeIcon />
-          <MenuIcon className={styles.smBtn}/>
-          <div className={styles.msgBtn}>
-            <PaperAirplaneIcon />
-            <div className={styles.count}>2</div>
-          </div>
-          <PlusCircleIcon className={styles.lgBtn} />
-          <UserGroupIcon className={styles.lgBtn} />
-          <HeartIcon className={styles.lgBtn} />
+          {!session && (
+            <button
+              type="button"
+              onClick={() => signIn()}>
+                Sign In
+            </button>
+          )}
+          {session && (
+            <>
+              <MenuIcon className={styles.smBtn}/>
+              <div className={styles.msgBtn}>
+                <PaperAirplaneIcon />
+                <div className={styles.count}>2</div>
+              </div>
+              <PlusCircleIcon className={styles.lgBtn} />
+              <UserGroupIcon className={styles.lgBtn} />
+              <HeartIcon className={styles.lgBtn} />
+              <img
+                src={session.user.image} />
+            </>
+          )}
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ const posts = [
     caption: 'Subscribe and Destroy the like button'
   },
   {
-    id: '1234',
+    id: '12345',
     username: 'itzzmeakhi',
     userImg: 'https://links.papareact.com/3ke',
     img: 'https://links.papareact.com/3ke',

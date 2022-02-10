@@ -1,0 +1,39 @@
+.suggestions {
+  .title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    p {
+      flex-grow: 1;
+      color: #999;
+    }
+    button {
+      background-color: #fff;
+      cursor: pointer;
+    }
+  }
+  .cards {
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      column-gap: 10px;
+      margin-bottom: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+        border-radius: 50%;
+        border: 1px solid #eee;
+        padding: 2px;
+      }
+      p {
+        flex-grow: 1;
+      }
+      button {
+        background-color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
